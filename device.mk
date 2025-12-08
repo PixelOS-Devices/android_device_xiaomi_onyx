@@ -145,7 +145,7 @@ PRODUCT_PACKAGES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    DolbyAtmos
 
 # Fastbootd
 PRODUCT_PACKAGES += \
