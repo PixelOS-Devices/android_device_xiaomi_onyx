@@ -16,6 +16,24 @@
       "message": "is this actually needed ?",
       "revId": "066d077ba8a3688be35efce013fd2cba7758b3b4",
       "serverId": "58543e18-2196-4633-8043-7787712585ad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbe03ec1_ab35031c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000054
+      },
+      "writtenOn": "2025-12-12T20:53:55Z",
+      "side": 1,
+      "message": "Yes, without this we can\u0027t make ussd calls. It\u0027s just loading",
+      "parentUuid": "99ae1109_7dc32e1c",
+      "revId": "066d077ba8a3688be35efce013fd2cba7758b3b4",
+      "serverId": "58543e18-2196-4633-8043-7787712585ad"
     }
   ]
 }
