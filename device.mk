@@ -180,7 +180,7 @@ PRODUCT_COPY_FILES += \
 
 # Hypsy
 PRODUCT_PACKAGES += \
-    xiaomi.system.hypsys.common-service
+    xiaomi.system.hypsys.common-service-dummy
 
 # Health
 PRODUCT_PACKAGES += \
