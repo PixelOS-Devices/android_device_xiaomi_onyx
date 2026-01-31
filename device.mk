@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
     libalsautilsv2.vendor \
+    libaudioaidlcommon.vendor \
     libaudio_aidl_conversion_common_ndk.vendor \
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8750/audio/primary-hal
@@ -142,10 +143,6 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
-
-# Dolby
-PRODUCT_PACKAGES += \
-    DolbyAtmos
 
 # Fastbootd
 PRODUCT_PACKAGES += \
