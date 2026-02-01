@@ -72,7 +72,7 @@ blob_fixups: blob_fixups_user_type = {
 
     (
         'odm/etc/camera/enhance_motiontuning.xml',
-        'odm/etc/camera/motiontuning.xml',
+        'odm/etc/camera/motiontuning.xml'
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
 
@@ -82,7 +82,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libar-pal.so',
         'vendor/lib64/libmcs.so',
         'vendor/lib64/libmikaraoke.so',
-        'vendor/lib64/libtiantongpal.so',
+        'vendor/lib64/libtiantongpal.so'
     ): blob_fixup()
         .replace_needed(
             'libaudioroute.so',
@@ -106,11 +106,11 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libtruetone.so',
         'odm/lib64/libvideomode.so',
         'vendor/lib64/hw/camera.qcom.so',
-        'vendor/lib64/libgnss.so',
+        'vendor/lib64/libgnss.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
-            'android.hardware.sensors-V3-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
     ),
 
     'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl': blob_fixup()
@@ -135,11 +135,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libcamximageformatutils.so',
         'vendor/lib64/libchifeature2.so',
         'vendor/lib64/libqvrservice.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
+        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so'
     ): blob_fixup()
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
-            'android.hardware.graphics.allocator-V2-ndk.so',
+            'android.hardware.graphics.allocator-V2-ndk.so'
     ),
 
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
@@ -154,7 +154,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
-        ),
+    ),
 
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
         .replace_needed(
@@ -172,19 +172,19 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
-        ),
+    ),
 
     'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
         .replace_needed(
             'libbluetooth_audio_session_aidl.so',
             'libbluetooth_audio_session_aidl_prebuilt.so'
-        ),
+    ),
 
     'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V4-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
-        ),
+    ),
 
     'vendor/lib64/libcameraopt.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
@@ -199,7 +199,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V2-ndk.so',
-            'android.media.audio.common.types-V3-ndk.so',
+            'android.media.audio.common.types-V3-ndk.so'
     ),
 
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
