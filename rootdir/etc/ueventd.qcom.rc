@@ -621,3 +621,6 @@ subsystem mem_buf_vm
 
 # IPA Events
 /dev/ipa_events         0660   radio      radio
+
+# Battery
+/sys/class/xm_power/charger/smart_charge smart_night 0660 system system
