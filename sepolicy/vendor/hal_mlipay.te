@@ -7,7 +7,6 @@ hal_server_domain(hal_mlipay_default, hal_mlipay)
 init_daemon_domain(hal_mlipay_default)
 
 get_prop(hal_mlipay_default, vendor_fp_prop)
-get_prop(hal_mlipay_default, vendor_system_prop)
 set_prop(hal_mlipay_default, vendor_payment_security_prop)
 
 allow hal_mlipay_client hal_mlipay_server:binder { call transfer };
