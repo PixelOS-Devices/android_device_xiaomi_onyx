@@ -373,6 +373,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/qcom-caf/wlan/wcn6740 \
     hardware/xiaomi \
     hardware/nxp/weaver/pixel \
     hardware/nxp/keymint/pixel
