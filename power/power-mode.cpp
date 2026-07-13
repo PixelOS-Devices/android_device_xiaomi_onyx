@@ -6,6 +6,7 @@
 
 #include <aidl/android/hardware/power/BnPower.h>
 #include <android-base/logging.h>
+#include <android-base/unique_fd.h>
 
 #include <fcntl.h>
 #include <sys/ioctl.h>
@@ -25,16 +26,16 @@ namespace pixel {
 using ::aidl::android::hardware::power::Mode;
 
 static int getTouchFd() {
-    static int fd = [] {
-        int f = open(TOUCH_DEV_PATH, O_RDWR);
+    static ::android::base::unique_fd fd = [] {
+        ::android::base::unique_fd f(open(TOUCH_DEV_PATH, O_RDWR));
         if (f < 0) {
             LOG(ERROR) << "Failed to open " << TOUCH_DEV_PATH;
-            return -1;
+            return ::android::base::unique_fd();
         }
-        ioctl(f, TOUCH_IOC_SELECT_TOUCH_ID, TOUCH_ID);
+        ioctl(f.get(), TOUCH_IOC_SELECT_TOUCH_ID, TOUCH_ID);
         return f;
     }();
-    return fd;
+    return fd.get();
 }
 
 static bool setTouchModeValue(int mode, int value) {
