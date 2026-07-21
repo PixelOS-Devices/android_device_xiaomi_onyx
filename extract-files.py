@@ -270,12 +270,17 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
 
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
+        .replace_needed(
+            'libaudioclient.so',
+            'libaudiobase.so'
+    ),
 
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libbinder_shim.so')
-        .add_needed('libinput_shim.so')
-        .remove_needed('android.hidl.base@1.0.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .add_needed('libaudiobase.so')
+        .replace_needed(
+            'android.media.audio.common.types-V4-cpp.so',
+            'android.media.audio.common.types-V5-cpp.so'
+    ),
 
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
