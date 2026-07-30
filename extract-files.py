@@ -274,6 +274,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so')
         .remove_needed('android.hidl.base@1.0.so'),
 
+    'vendor/bin/system_dlkm_modprobe.sh': blob_fixup()
+        .regex_replace(
+            r'for kernel_ver_dir in \$\{system_dlkm_dir\}/\*;',
+            'for kernel_ver_dir in ${system_dlkm_dir} ${system_dlkm_dir}/*;',
+        ),
+
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
