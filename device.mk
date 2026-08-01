@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.onyx.rc \
     init.qcom.rc \
+    init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc
 
@@ -218,7 +219,8 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qti.kernel.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
