@@ -198,7 +198,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom
 
 PRODUCT_PACKAGES += \
-    fw_dir.ueventd.qcom.rc \
     ueventd-odm.rc \
     ueventd.qcom.rc
 
