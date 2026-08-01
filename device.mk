@@ -203,7 +203,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc
