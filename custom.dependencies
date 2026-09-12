@@ -9,8 +9,16 @@
     "branch": "lineage-23.2"
   },
   {
-    "repository": "PixelOS-Devices/android_device_xiaomi_onyx-kernel",
-    "target_path": "device/xiaomi/onyx-kernel"
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8735",
+    "target_path": "kernel/xiaomi/sm8735"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8735-devicetrees",
+    "target_path": "kernel/xiaomi/sm8735-devicetrees"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8735-modules",
+    "target_path": "kernel/xiaomi/sm8735-modules"
   },
   {
     "remote": "gitlab",
